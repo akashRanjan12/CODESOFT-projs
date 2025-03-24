@@ -2,3 +2,87 @@
   margin: 0;
   padding: 0;
 }
+body {
+  background-color: rgb(125, 218, 255);
+  height: 100svh;
+  overflow-x: hidden;
+}
+
+.cont {
+  height: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  .heading {
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    align-items: center;
+  }
+  .cal-cont {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.617), rgba(0, 0, 0, 0.94));
+    input {
+      height: 60px;
+      width: 290px;
+      background-color: whitesmoke;
+      font-size: 2rem;
+      text-align: end;
+    }
+    .btn-cont {
+      display: flex;
+      .num {
+        width: 225px;
+        .clear {
+          background-color: rgb(214, 10, 10);
+        }
+        button {
+          background-color: rgb(70, 70, 70);
+          color: white;
+        }
+        .ze {
+          width: 143px;
+        }
+      }
+      .operators {
+        width: 71px;
+        button {
+          background-color: rgb(255, 166, 0);
+        }
+        .res {
+          background-color: rgb(0, 255, 0);
+        }
+      }
+      .num,
+      .operators {
+        padding-top: 5px;
+        button {
+          height: 70px;
+          width: 70px;
+          margin-top: 2px;
+          cursor: pointer;
+          font-size: 1.3rem;
+        }
+        button:active {
+          transform: none;
+          background: inherit;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .cont {
+    .heading {
+      font-size: 2rem;
+    }
+  }
+}

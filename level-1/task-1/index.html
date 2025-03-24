@@ -3,7 +3,157 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>level-1 : task-1</title>
+    <title>level-1 : task-1 (landing page)</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
   </head>
-  <body></body>
+  <body>
+    <div class="head-cont">
+      <div class="header-1 head">
+        <div class="sm">
+          <span><i class="fa-brands fa-whatsapp"></i></span>
+          <span><i class="fa-brands fa-instagram"></i></span>
+          <span><i class="fa-brands fa-linkedin"></i></span>
+          <span><i class="fa-brands fa-youtube"></i></span>
+        </div>
+        <div class="cont"><i class="fa fa-phone"></i> +91 9897461238</div>
+      </div>
+      <div class="header-2 head">
+        <div class="logo">LOGO</div>
+        <div class="menu">
+          <span>Home</span>
+          <span>Blog</span>
+          <span>Page</span>
+          <span>Services</span>
+          <span>Testimonials</span>
+          <span>Contacts</span>
+          <button style="cursor: pointer">buy now</button>
+        </div>
+        <div class="search">
+          <i class="fa fa-search"></i>
+        </div>
+        <div class="burger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="menu-cont">
+      <div class="menu">
+        <span>Home</span>
+        <span>Blog</span>
+        <span>Page</span>
+        <span>Services</span>
+        <span>Testimonials</span>
+        <span>Contacts</span>
+        <button>buy now</button>
+      </div>
+    </div>
+    <main>
+      <div class="head-img">
+        <div class="data">
+          <p>
+            A landing page is an ideal web development project for beginners. It
+            requires basic knowledge of HTML and CSS.A landing page is an ideal
+            web development project for beginners. It requires basic knowledge
+            of HTML and CSS.
+          </p>
+        </div>
+      </div>
+      <div class="supp-cont">
+        <div class="card">
+          <i class="fa-solid fa-circle-play"> </i
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Launch Business
+          <br /><br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+          </p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-headphones"></i
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Online Support Team
+          <br /><br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+          </p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-clock"></i
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Time Management
+          <br /><br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+          </p>
+        </div>
+      </div>
+      <div class="abt-cont">
+        <div class="left-cont cont">
+          <h1>About Us</h1>
+          <h2>15 years, CODSOFT is a vibrant and diverse community.</h2>
+          <br />
+          <p>
+            We believe in the power of leadership and its ability to drive
+            positive change. That's why we provide platforms and resources for
+            our community members to develop their leadership skills. Through
+            mentorship programs, workshops, and collaborative projects, we
+            empower individuals to take on leadership roles and make a
+            difference in their respective fields. <br /><br />
+            <button>Know more..</button>
+          </p>
+        </div>
+        <div class="right-cont cont">
+          <div class="img"></div>
+        </div>
+      </div>
+      <h1 id="h1">Our Services</h1>
+      <div
+        class="service-cont"
+        style="background-color: whitesmoke; justify-content: center">
+        <div class="box">
+          <div class="img1 img">
+            <p><i class="fa-solid fa-volume-high"></i> User Experence</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img2 img">
+            <p><i class="fa-brands fa-figma"></i> Creative Design</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img3 img">
+            <p><i class="fa-solid fa-dollar-sign"></i> Retina Ready</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const burg = document.querySelector(".burger");
+      const menu = document.querySelector(".menu-cont");
+      let val = "true";
+      burg.addEventListener("click", () => {
+        if (val == "true") {
+          menu.style.display = "block";
+          val = "false";
+          burg.innerHTML = `<i class="fa-solid fa-multiply"></i>`;
+        } else {
+          menu.style.display = "none";
+          val = "true";
+          burg.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+        }
+      });
+      menu.addEventListener("click", () => {
+        menu.style.display = "none";
+        burg.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+      });
+      document.querySelector("main").addEventListener("click", () => {
+        menu.style.display = "none";
+        burg.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+      });
+    </script>
+  </body>
 </html>

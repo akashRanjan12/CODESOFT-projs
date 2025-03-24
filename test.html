@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Reveal Effect</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .container {
+        height: 200vh; /* Long page to enable scrolling */
+        padding: 50px;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(50px); /* Move down slightly */
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .section {
+        background: white;
+        margin: 40px auto;
+        padding: 20px;
+        width: 80%;
+        max-width: 700px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-size: 1.2em;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="reveal">Welcome to My Page</h1>
+      <p class="reveal">Scroll down to see the animation effect.</p>
+
+      <div class="section reveal">This is a section with text.</div>
+      <div class="section reveal">
+        <img src="level-1/task-2/img/o-x-game.png" alt="Sample Image" />
+      </div>
+      <div class="section reveal">More content appears smoothly.</div>
+      <div class="section reveal">
+        <img src="level-1/task-2/img/o-x-game.png" alt="Another Image" />
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll(".reveal");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              }
+            });
+          },
+          { threshold: 0.2 }
+        ); // Trigger when 20% of the element is visible
+
+        elements.forEach((el) => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>
